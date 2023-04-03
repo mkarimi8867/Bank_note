@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>submit</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
 
 </head>
+
 <body>
+    <div class="login">
     <h2>
         Please enter required information:
     </h2>
+
     <form action="/predict" method="post">
         <label for="variance">variance:</label><br>
         <input type="text" id="variance" name="variance" value="0"><br><br>
@@ -18,8 +26,11 @@
         <input type="text" id="curtosis" name="curtosis" value="0"><br><br>
         <label for="entropy">entropy:</label><br>
         <input type="text" id="entropy" name="entropy" value="0"><br><br>
-        <input type="submit" value="Submit">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-    <p> <h3>pleaase press "submit" to check note authentication</h3></p>
+
+    </div>
+{{pred}}
+
 </body>
 </html>
